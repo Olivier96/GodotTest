@@ -24,6 +24,10 @@ qt_add_qml_module(GodotQmlBridge
         src/GodotBridge.cpp
 )
 
+target_include_directories(GodotQmlBridge PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+)
+
 target_link_libraries(GodotQmlBridge PRIVATE
     Qt6::Quick
     Qt6::Network
